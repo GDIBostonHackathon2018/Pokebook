@@ -8,8 +8,96 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    <div class="row">
-      <h1>Pokébook</h1>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="/images/pokeball.png" alt="Pokebook">
+          Pokébook
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="row expanded">
+        <div class="columns small-12 medium-6">
+          <div class="pokedex-section">
+            <div class="pokedex-section--front">
+              <img src="../images/pokedex.png" alt="">
+            </div>
+            <div class="pokedex-section--back">
+              <form action="">
+                <label for="">Search A Pokemon</label>
+                <input type="text" name="" value="">
+              </form>
+              <div class="search-btn"><img src="/images/pokeball.png" alt="Search btn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="columns small-12 medium-6">
+          <div class="row pokedex-type--wrapper">
+            <div class="columns small-6">
+              <a href="#water-type" data-open="typeWater">
+                <div class="pokedex-type--card blue type-water">
+                  <img src="/images/squirtle.png" alt="squiotle" />
+                </div>
+              </a>
+            </div>
+            <div class="columns small-6">
+              <a href="#">
+                <div class="pokedex-type--card red type-fire">
+                  <img src="/images/charmander.png" alt="charmander" />
+                </div>
+              </a>
+            </div>
+            <div class="columns small-6">
+              <a href="#">
+                <div class="pokedex-type--card green type-grass">
+                  <img src="/images/bulbasaur.png" alt="bulbasaur" />
+                </div>
+              </a>
+            </div>
+            <div class="columns small-6">
+              <a href="#">
+                <div class="pokedex-type--card gray type-pikachu">
+                  <img src="/images/pikachu-black.png" alt="pikachu" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+
+    <!-- Type Detail Modal -->
+    <div class="reveal pokedex-type--modal large" id="typeWater" data-reveal>
+      <h1>Hey! We are water type Pokémon</h1>
+      <div class="row">
+        <div class="columns small-12 medium-4 large-3">
+          <div class="pokedex-type--card_dt">
+            <img src="/images/squirtle.png" alt="squiotle" />
+            <h3>Squiotle</h3>
+            <h5><span>Id:</span>#007</h5>
+            <h5><span>Type:</span>Water</h5>
+            <h5><span>Height:</span>19.8 lbs</h5>
+            <h5><span>Weight:</span> 1'08"</h5>
+            <p><span>Descripton:</span>Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.</p>
+          </div>
+        </div>
+        <div class="columns small-12 medium-4 large-3">
+          <div class="pokedex-type--card_dt">
+            <img src="/images/squirtle.png" alt="squiotle" />
+            <h3>Squiotle</h3>
+          </div>
+        </div>
+        <div class="columns small-12 medium-4 large-3">
+          <div class="pokedex-type--card_dt">
+            <img src="/images/squirtle.png" alt="squiotle" />
+            <h3>Squiotle</h3>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
