@@ -48,15 +48,18 @@ $(document).foundation();
       if (data.types.length == 2) {
         var pokeType2 = data.types[1].type.name;
       } else var pokeType2 = null;
+      var pokeHeight = data.height;
+      var pokeWeight = data.weight;
 
       $.getJSON(pokeUrl, function(data) {
         //var imageURI = data2.sprites.front_default;
         //console.log(data2);
         //console.log(JSON.stringify(data, null, "  "));
-        console.log("Number: ", pokeID);
-        console.log("Name: ", pokeName);
-        console.log("Type 1: ", pokeType1);
-        console.log("Type 2: ", pokeType2);
+        // console.log("Number: ", pokeID);
+        // console.log("Name: ", pokeName);
+        // console.log("Type 1: ", pokeType1);
+        // console.log("Type 2: ", pokeType2);
+
         //console.log("Image URI: ", imageURI);
         var li = "";
         li += '<li><img src="' + pokeImage + '">';
