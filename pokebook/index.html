@@ -25,11 +25,17 @@
               <img src="images/pokedex.png" alt="">
             </div>
             <div class="pokedex-section--back">
-              <form action="">
-                <label for="">Search A Pokemon</label>
-                <input type="text" name="" value="">
-              </form>
-              <div class="search-btn"><img src="images/pokeball.png" alt="Search btn"></div>
+              <div class="pokedex-search--form">
+                <form id="pokeForm" action="#pokeDetails-page">
+                  <label for="pokeInput">Search A Pokemon</label>
+                  <input type="text" name="pokeInput" id="pokeInput" placeholder="Enter the Pokémon name" value="">
+                  <div class="search-btn"><img src="images/pokeball.png" alt="Search btn"></div>
+                </form>
+              </div>
+              <div class="pokedex-search--result">
+                <ul class="pokedex-search--result_card" id="pokeDetails"></ul>
+              </div>
+              <button class="search-close--btn" type="button" name="button">x</button>
             </div>
           </div>
         </div>

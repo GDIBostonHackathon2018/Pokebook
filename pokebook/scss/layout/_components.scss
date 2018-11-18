@@ -1,4 +1,5 @@
 .pokedex-section {
+  cursor: pointer;
   padding: 60px 30px;
   position: relative;
   .pokedex-section--front {
@@ -6,41 +7,73 @@
     width: 90%;
   }
   .pokedex-section--back {
-    background-color: rgba($white, 0.8);
+    background-color: rgba($white, 0.92);
     height: 100%;
     left: -100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    //justify-content: center;
     align-items: center;
+    opacity: 0;
+    padding: 30px;
     position: absolute;
     top: 0;
-    width: 100%;
+    width: calc(100vw - 30px);
     transition: left 0.5s ease;
-    label {
-      color: $dark-blue;
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 15px;
+    &.is-open {
+      left: 0;
+      opacity: 1;
+      z-index: 3;
     }
-    input {
-      width: 250px;
-    }
-    .search-btn {
-      margin-top: 30px;
-      opacity: 0.85;
-      width: 50px;
-      transform: scale(1, 1);
-      transition: all 0.3s ease;
-      &:hover {
-        opacity: 1;
-        transform: scale(1.1, 1.1);
+    .pokedex-search--form {
+      display: flex;
+      justify-content: center;
+      width: 48%;
+      label {
+        color: $dark-blue;
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      input {
+        width: 250px;
+      }
+      .search-btn {
+        margin: 0 auto;
+        margin-top: 30px;
+        opacity: 0.85;
+        width: 50px;
+        transform: scale(1, 1);
+        transition: all 0.3s ease;
+        &:hover {
+          opacity: 1;
+          transform: scale(1.1, 1.1);
+        }
       }
     }
-  }
-  &:hover {
-    .pokedex-section--back {
-      left: 0;
+    .pokedex-search--result {
+      margin: 0 auto;
+      width: 50%;
+      &_card {
+        width: 50%;
+        min-width: 350px;
+        li {
+          list-style: none;
+        }
+        img {
+          margin-bottom: 20px;
+          transform: scale(1.2);
+        }
+      }
+    }
+    .search-close--btn {
+      color: $dark-blue;
+      cursor: pointer;
+      font-size: 52px;
+      font-family: $header-font;
+      position: absolute;
+      top: 30px;
+      right: 15%;
     }
   }
 }
@@ -66,6 +99,7 @@
   height: 230px;
   margin-bottom: 30px;
   padding: 30px;
+  padding-top: 60px;
   position: relative;
   overflow: hidden;
   &.is--visible {
